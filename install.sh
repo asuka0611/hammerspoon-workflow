@@ -11,13 +11,15 @@ if [ -d "$DEST" ]; then
   cp -R "$DEST" "$BACKUP"
 fi
 
-mkdir -p "$DEST/common" "$DEST/comic" "$DEST/terminal" "$DEST/window"
+mkdir -p "$DEST/common" "$DEST/comic" "$DEST/terminal" "$DEST/window" "$DEST/system"
 
 cp "$ROOT/init.lua" "$DEST/init.lua"
 cp "$ROOT/common/key_sequence.lua" "$DEST/common/key_sequence.lua"
 cp "$ROOT/comic/hotkeys.lua" "$DEST/comic/hotkeys.lua"
 cp "$ROOT/terminal/capture.lua" "$DEST/terminal/capture.lua"
 cp "$ROOT/window/focus.lua" "$DEST/window/focus.lua"
+cp "$ROOT/system/auto_reload.lua" "$DEST/system/auto_reload.lua"
 
 echo "インストール完了"
-echo "Hammerspoonで Reload Config を実行してください。"
+echo "Hammerspoonで Reload Config を1回実行してください。"
+echo "以降は .lua ファイル保存時に自動Reloadされます。"
