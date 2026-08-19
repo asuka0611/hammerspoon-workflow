@@ -26,6 +26,14 @@ Terminalへ最後に一括投入したコマンド群と、その実行結果を
 5. `Space`
 6. 今回のコマンド群 + 実行結果がクリップボードへ入る
 
+### Window Auto Focus
+
+最前面のウィンドウを閉じたり最小化したあと、フォーカスされている通常ウィンドウがなければ、現在のSpaceにある次の表示中ウィンドウへ自動でフォーカスします。
+
+- ウィンドウを閉じた後の「どこにもフォーカスされていない」状態を補完
+- 最小化後にも動作
+- macOSがすでに正常に次のウィンドウへフォーカスしている場合は何もしない
+
 ## 構成
 
 ```text
@@ -37,6 +45,8 @@ hammerspoon-workflow/
 │   └── capture.lua
 ├── common/
 │   └── key_sequence.lua
+├── window/
+│   └── focus.lua
 ├── install.sh
 └── .gitignore
 ```
@@ -46,7 +56,7 @@ hammerspoon-workflow/
 - macOS
 - Hammerspoon
 - Hammerspoonへのアクセシビリティ権限
-- JISキーボード（`英数` キーを利用）
+- JISキーボード（Terminal Captureで`英数`キーを利用）
 
 ## インストール
 
@@ -61,4 +71,9 @@ chmod +x install.sh
 
 ## 方針
 
-`init.lua` に機能を詰め込まず、機能単位でモジュールを分けます。Terminal関連は `terminal/`、漫画関連は `comic/`、複数機能から使う処理は `common/` に置きます。
+`init.lua` に機能を詰め込まず、機能単位でモジュールを分けます。
+
+- Terminal関連: `terminal/`
+- 漫画関連: `comic/`
+- ウィンドウ関連: `window/`
+- 複数機能から使う共通処理: `common/`
