@@ -11,7 +11,7 @@ if [ -d "$DEST" ]; then
   cp -R "$DEST" "$BACKUP"
 fi
 
-mkdir -p "$DEST/common" "$DEST/comic" "$DEST/terminal" "$DEST/window" "$DEST/system"
+mkdir -p "$DEST/common" "$DEST/comic" "$DEST/terminal" "$DEST/window" "$DEST/system" "$DEST/launcher"
 
 cp "$ROOT/init.lua" "$DEST/init.lua"
 cp "$ROOT/common/key_sequence.lua" "$DEST/common/key_sequence.lua"
@@ -19,6 +19,7 @@ cp "$ROOT/comic/hotkeys.lua" "$DEST/comic/hotkeys.lua"
 cp "$ROOT/terminal/capture.lua" "$DEST/terminal/capture.lua"
 cp "$ROOT/window/focus.lua" "$DEST/window/focus.lua"
 cp "$ROOT/system/auto_reload.lua" "$DEST/system/auto_reload.lua"
+cp "$ROOT/launcher/palette.lua" "$DEST/launcher/palette.lua"
 
 echo "インストール完了"
 echo "Hammerspoonで Reload Config を1回実行してください。"
