@@ -15,3 +15,6 @@ terminalCapture = require("terminal.capture")
 
 -- Window Auto Focus
 windowFocus = require("window.focus")
+
+-- Command Palette
+commandPalette = require("launcher.palette")
