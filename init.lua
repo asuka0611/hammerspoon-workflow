@@ -7,3 +7,6 @@ comicHotkeys = require("comic.hotkeys")
 
 -- Terminal Capture
 terminalCapture = require("terminal.capture")
+
+-- Window Auto Focus
+windowFocus = require("window.focus")
