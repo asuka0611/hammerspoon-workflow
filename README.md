@@ -13,6 +13,25 @@ macOS向けのHammerspoon設定。機能ごとにLuaファイルを分割して�
 - 保存時に複数イベントが発生しても、0.25秒のデバウンスでReloadをまとめる
 - 導入後は基本的に手動の **Reload Config** が不要
 
+### Command Palette
+
+Hammerspoonの各機能を検索して実行するランチャーです。
+
+- `Control + Option + Space` で開く
+- 文字入力でコマンドを絞り込み
+- ↑↓で選択
+- `Enter` で選択中のコマンドを実行
+
+現在のコマンド:
+
+- Reload Hammerspoon
+- Open Console
+- Open Config Folder
+- Comic Hotkeys Status
+- Terminal Capture Status
+- Focus Next Window
+- Auto Reload Status
+
 ### Comic Hotkeys
 
 Google Chromeの対象コミックビューアで操作を拡張します。
@@ -50,6 +69,8 @@ hammerspoon-workflow/
 ├── init.lua
 ├── system/
 │   └── auto_reload.lua
+├── launcher/
+│   └── palette.lua
 ├── comic/
 │   └── hotkeys.lua
 ├── terminal/
@@ -85,6 +106,7 @@ chmod +x install.sh
 `init.lua` に機能を詰め込まず、機能単位でモジュールを分けます。
 
 - システム関連: `system/`
+- ランチャー関連: `launcher/`
 - Terminal関連: `terminal/`
 - 漫画関連: `comic/`
 - ウィンドウ関連: `window/`
